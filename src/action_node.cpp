@@ -17,8 +17,8 @@ Status ActionNode::tick() {
 }
 
 ActionNode::Ptr
-ActionNode::create() {
-    return std::make_shared<ActionNode>();
+ActionNode::create(const std::string& nodeName, const Status& status) {
+    return std::make_shared<ActionNode>(nodeName, status);
 }
 
 } /* namespace */

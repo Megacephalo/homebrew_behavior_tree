@@ -13,7 +13,7 @@ class SequenceNode : public TreeNode {
     ~SequenceNode() = default;
 
     Status tick() override;
-    static SequenceNode::Ptr create();
+    static SequenceNode::Ptr create(const std::string& nodeName = "", const Status& status = Status::IDLE);
 };
 
 } /* namespace */

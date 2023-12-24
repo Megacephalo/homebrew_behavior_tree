@@ -17,8 +17,8 @@ Status FallbackNode::tick() {
 }
 
 FallbackNode::Ptr
-FallbackNode::create() {
-    return std::make_shared<FallbackNode>();
+FallbackNode::create(const std::string& nodeName, const Status& status) {
+    return std::make_shared<FallbackNode>(nodeName, status);
 }
 
 } /* namespace */

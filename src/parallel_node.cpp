@@ -17,8 +17,8 @@ Status ParallelNode::tick() {
 }
 
 ParallelNode::Ptr
-ParallelNode::create() {
-    return std::make_shared<ParallelNode>();
+ParallelNode::create(const std::string& nodeName, const Status& status) {
+    return std::make_shared<ParallelNode>(nodeName, status);
 }
 
 } /* namespace */

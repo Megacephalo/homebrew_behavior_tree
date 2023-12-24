@@ -13,7 +13,7 @@ class ConditionNode : public TreeNode {
     ~ConditionNode() = default;
 
     Status tick() override;
-    static ConditionNode::Ptr create();
+    static ConditionNode::Ptr create(const std::string& nodeName = "", const Status& status = Status::IDLE);
 };
 
 } /* namespace */

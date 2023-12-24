@@ -13,7 +13,7 @@ class FallbackNode : public TreeNode {
     ~FallbackNode() = default;
 
     Status tick() override;
-    static FallbackNode::Ptr create();
+    static FallbackNode::Ptr create(const std::string& nodeName = "", const Status& status = Status::IDLE);
 };
 
 } /* namespace */

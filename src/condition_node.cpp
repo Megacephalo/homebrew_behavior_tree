@@ -17,8 +17,8 @@ Status ConditionNode::tick() {
 }
 
 ConditionNode::Ptr
-ConditionNode::create() {
-    return std::make_shared<ConditionNode>();
+ConditionNode::create(const std::string& nodeName, const Status& status) {
+    return std::make_shared<ConditionNode>(nodeName, status);
 }
 
 } /* namespace */

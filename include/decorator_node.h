@@ -14,7 +14,7 @@ class DecoratorNode : public TreeNode {
 
     Status tick() override;
 
-    static DecoratorNode::Ptr create();
+    static DecoratorNode::Ptr create(const std::string& nodeName = "", const Status& status = Status::IDLE);
 };
 
 } /* namespace */

@@ -17,8 +17,8 @@ Status SequenceNode::tick() {
 }
 
 SequenceNode::Ptr
-SequenceNode::create() {
-    return std::make_shared<SequenceNode>();
+SequenceNode::create(const std::string& nodeName, const Status& status) {
+    return std::make_shared<SequenceNode>(nodeName, status);
 }
 
 } /* namespace */

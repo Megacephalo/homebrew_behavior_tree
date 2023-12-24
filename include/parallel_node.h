@@ -13,7 +13,7 @@ class ParallelNode : public TreeNode {
     ~ParallelNode() = default;
 
     Status tick() override;
-    static ParallelNode::Ptr create();
+    static ParallelNode::Ptr create(const std::string& nodeName = "", const Status& status = Status::IDLE);
 };
 
 } /* namespace */

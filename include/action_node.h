@@ -13,7 +13,7 @@ class ActionNode : public TreeNode {
     ~ActionNode() = default;
 
     Status tick() override;
-    static ActionNode::Ptr create();
+    static ActionNode::Ptr create(const std::string& nodeName = "", const Status& status = Status::IDLE);
 };
 
 } /* namespace */

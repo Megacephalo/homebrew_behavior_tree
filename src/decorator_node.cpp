@@ -17,8 +17,8 @@ Status DecoratorNode::tick() {
 }
 
 DecoratorNode::Ptr
-DecoratorNode::create() {
-    return std::make_shared<DecoratorNode>();
+DecoratorNode::create(const std::string& nodeName, const Status& status) {
+    return std::make_shared<DecoratorNode>(nodeName, status);
 }
 
 } /* namespace */
