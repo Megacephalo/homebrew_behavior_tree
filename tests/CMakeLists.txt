@@ -1,3 +1,5 @@
+include(FetchContent)
+
 # Install Google Test
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/bin/unit_tests)
 FetchContent_Declare(
