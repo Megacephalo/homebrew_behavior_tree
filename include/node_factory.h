@@ -16,7 +16,7 @@ public:
     NodeFactory() = default;
     ~NodeFactory() = default;
 
-    TreeNode::Ptr CreateNode(const std::string& nodeName, const std::string& nodeType, const Status& nodeStatus = Status::IDLE);
+    TreeNode::Ptr registerNode(const std::string& nodeName, const std::string& nodeType, const Status& nodeStatus = Status::IDLE);
 };
 
 } /* namespace */

@@ -2,7 +2,7 @@
 
 namespace Homebrew_Behavior_Tree {
 
-TreeNode::Ptr CreateNode(const std::string& nodeName, const std::string& nodeType, const Status& nodeStatus) {
+TreeNode::Ptr registerNode(const std::string& nodeName, const std::string& nodeType, const Status& nodeStatus) {
     if (nodeType == "Action") {
         return ActionNode::create(nodeName, nodeStatus);
     } else if (nodeType == "Condition") {
