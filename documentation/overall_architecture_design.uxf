@@ -1,0 +1,487 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.1">
+  <zoom_level>20</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>860</x>
+      <y>520</y>
+      <w>420</w>
+      <h>380</h>
+    </coordinates>
+    <panel_attributes>enum Status
+--
+
++ success
++ failure
++ running
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1100</x>
+      <y>1560</y>
+      <w>500</w>
+      <h>380</h>
+    </coordinates>
+    <panel_attributes>class SequenceNode
+--
+- children : TreeNode[]
+--
+
++ tick() : Status
++ create() : SequenceNode*
++ name(nodeName : string) : void
++ nodeName() : string</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1620</x>
+      <y>1560</y>
+      <w>500</w>
+      <h>380</h>
+    </coordinates>
+    <panel_attributes>class FallbackNode
+--
+- children : TreeNode[]
+--
+
++ tick() : Status
++ create() : FallbackNode*
++ name(nodeName : string) : void
++ nodeName() : string</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>860</x>
+      <y>1060</y>
+      <w>840</w>
+      <h>360</h>
+    </coordinates>
+    <panel_attributes>class TreeNode
+--
+
+# status : Status
+# children : TreeNode[]
+- nodeName : string
+
+--
+
++ tick() : Status
+# name(nodeName : string) : void
+# nodeName() : string</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>0</x>
+      <y>1560</y>
+      <w>520</w>
+      <h>380</h>
+    </coordinates>
+    <panel_attributes>class DecoratorNode
+--
+
+
++ tick() : Status
++ create() : DecoratorNode*
++ name(nodeName : string) : void
++ nodeName() : string</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>3060</x>
+      <y>1060</y>
+      <w>1020</w>
+      <h>380</h>
+    </coordinates>
+    <panel_attributes>class NodeFactory
+--
+
++ registerNode(nodeType: string, nodeName: str) : AbstractNode*</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>560</x>
+      <y>1560</y>
+      <w>520</w>
+      <h>380</h>
+    </coordinates>
+    <panel_attributes>class ParallelNode
+--
+- children : TreeNode[]
+--
+
++ tick() : Status
++ create() : ParallelNode*
++ name(nodeName : string) : void
++ nodeName() : string</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2140</x>
+      <y>1560</y>
+      <w>500</w>
+      <h>380</h>
+    </coordinates>
+    <panel_attributes>class ActionNode
+--
+- children : TreeNode[]
+--
+
++ tick() : Status
++ create() : ActionNode*
++ name(nodeName : string) : void
++ nodeName() : string</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2660</x>
+      <y>1560</y>
+      <w>500</w>
+      <h>380</h>
+    </coordinates>
+    <panel_attributes>class ConditionNode
+--
+- children : TreeNode[]
+--
+
++ tick() : Status
++ create() : ConditionNode*
++ name(nodeName : string) : void
++ nodeName() : string</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1520</x>
+      <y>520</y>
+      <w>560</w>
+      <h>380</h>
+    </coordinates>
+    <panel_attributes>class Blackboard
+--
+- ParameterList : [string, variant&lt;&gt;]
+
+--
+
++ getValue(key : string) : variant&lt;&gt;</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2480</x>
+      <y>520</y>
+      <w>420</w>
+      <h>380</h>
+    </coordinates>
+    <panel_attributes>class BehaviorTree
+--
+- internal_bt : AstractNode*
+
+--
+
++ get() : BehaviorTree*</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>3740</x>
+      <y>520</y>
+      <w>480</w>
+      <h>380</h>
+    </coordinates>
+    <panel_attributes>class ScriptParser
+--
++ ScriptParser()
++ read(srcFile : string) : void
+- buildTree() : BehaviorTree*</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2960</x>
+      <y>0</y>
+      <w>420</w>
+      <h>380</h>
+    </coordinates>
+    <panel_attributes>class BT_GUI
+--
++ run()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1060</x>
+      <y>880</y>
+      <w>60</w>
+      <h>220</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1040</x>
+      <y>1400</y>
+      <w>1360</w>
+      <h>200</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;660.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1040</x>
+      <y>1400</y>
+      <w>820</w>
+      <h>200</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;390.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1040</x>
+      <y>1400</y>
+      <w>320</w>
+      <h>200</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;140.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>740</x>
+      <y>1400</y>
+      <w>360</w>
+      <h>200</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>160.0;10.0;10.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>160</x>
+      <y>1400</y>
+      <w>940</w>
+      <h>200</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>450.0;10.0;10.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1060</x>
+      <y>880</y>
+      <w>740</w>
+      <h>220</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>350.0;10.0;10.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1680</x>
+      <y>1240</y>
+      <w>1420</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;690.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>180</x>
+      <y>1300</y>
+      <w>2920</w>
+      <h>300</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;130.0;1440.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>740</x>
+      <y>1300</y>
+      <w>2360</w>
+      <h>300</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;130.0;1160.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1300</x>
+      <y>1300</y>
+      <w>1800</w>
+      <h>300</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;130.0;880.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1780</x>
+      <y>1300</y>
+      <w>1320</w>
+      <h>300</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;130.0;640.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>2340</x>
+      <y>1300</y>
+      <w>760</w>
+      <h>300</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;130.0;360.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>1520</x>
+      <y>380</y>
+      <w>420</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>This instance should be singleton as it is the database of the whole tree
+style=wordwrap</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>400</x>
+      <y>1060</y>
+      <w>440</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>The created nodes should be singleton
+style=wordwrap</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>2060</x>
+      <y>700</y>
+      <w>460</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;210.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>2880</x>
+      <y>700</y>
+      <w>440</w>
+      <h>400</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>200.0;180.0;200.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>2880</x>
+      <y>660</y>
+      <w>900</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;430.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>3480</x>
+      <y>880</y>
+      <w>500</w>
+      <h>220</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;90.0;230.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>2640</x>
+      <y>360</y>
+      <w>580</w>
+      <h>200</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;80.0;270.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>3160</x>
+      <y>360</y>
+      <w>860</w>
+      <h>200</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>410.0;80.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1040</x>
+      <y>1400</y>
+      <w>1880</w>
+      <h>200</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;920.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>2840</x>
+      <y>1300</y>
+      <w>260</w>
+      <h>300</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;130.0;110.0;10.0</additional_attributes>
+  </element>
+</diagram>
