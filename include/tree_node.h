@@ -1,6 +1,7 @@
 #ifndef _HOMEBREW_BEHAVIOR_TREE_TREE_NODE_H_
 #define _HOMEBREW_BEHAVIOR_TREE_TREE_NODE_H_
 
+#include <sstream>
 #include <string>
 #include <unordered_set>
 #include <memory>
@@ -21,6 +22,8 @@ class TreeNode {
     virtual ~TreeNode();
     virtual Status tick() = 0;
     virtual void reset() {};
+    std::string getName() const;
+    std::string getState() const;
 };
 
 } /* namespace */

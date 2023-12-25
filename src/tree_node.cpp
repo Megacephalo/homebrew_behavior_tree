@@ -13,4 +13,16 @@ TreeNode::~TreeNode() {
     }
 } /* dtor */
 
+std::string
+TreeNode::getName() const {
+    return nodeName_;
+} /* getName */
+
+std::string
+TreeNode::getState() const {
+    std::stringstream ss;
+    ss << status_;
+    return ss.str();
+} /* getState */
+
 } /* namespace */
