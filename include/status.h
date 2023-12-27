@@ -12,6 +12,7 @@ enum class Status {
     RUNNING
 };
 
+inline
 std::ostream& operator << (std::ostream& os, const Status& status) {
     switch (status) {
         case Status::IDLE:
