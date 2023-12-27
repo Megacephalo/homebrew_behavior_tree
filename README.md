@@ -58,9 +58,24 @@ doxygen Doxyfile
 
 You should see a `html` directory appearing under the `documentation/` directory holding all the generated HTML files and their inventories.
 
+## Wiki
+
+It would also be great if you can spare a couple minutes to browse this project's Wiki to learn on the software architecture design aspect. Much appreciated! Please to the Wiki [here](https://github.com/Megacephalo/homebrew_behavior_tree/wiki).
+
 ## Help
 
 Please let me know if you encounter any issue via GitHub's issues or email to [Charly Huang](mailto:charly.charlongo@gmail.com). And please do leave any advice I am more than happy to hear from you.
+
+## Acknowledgements
+
+Huge thanks to the following authors and technical experts. You guys helped me to make this project a reality and this journey more enjoyable.
+
+- Behavior Trees in Robotics and AI: An Introduction (Chapman & Hall/CRC Artificial Intelligence and Robotics Series) by Michele Colledanchise (Author), Petter Ögren (Author)
+- [Davide Faconti - BehaviorTree.CPP](https://www.behaviortree.dev/)
+- [Introduction to behavior trees  by Sebastian Castro](https://robohub.org/introduction-to-behavior-trees/)
+- [Behavior Trees for Robotic Applications (ROS2) in C++ by Markus Buchholz](https://markus-x-buchholz.medium.com/behavior-trees-in-c-for-robotic-applications-ros2-775ec0e97856)
+- [Overview — Behavior tree library by Huawei Zhu  ](https://medium.com/@hihuaweizhu/behavior-tree-library-8cf31acb3772)
+- [C++ behavior trees library design from lisyarus blog](https://lisyarus.github.io/blog/programming/2022/08/22/behavior-trees.html)
 
 ## Authors
 
