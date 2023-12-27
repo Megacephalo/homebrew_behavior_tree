@@ -8,12 +8,15 @@ DecoratorNode::DecoratorNode(const std::string& nodeName, const Status& status)
 
 Status DecoratorNode::tick() {
     if (children_.empty()) {
-        return Status::FAILURE;
+        throw std::runtime_error("ConditionNode::tick() - No child to tick");
     }
-    // TODO
+    if (children_.size() > 1) {
+        throw std::runtime_error("ConditionNode::tick() - Only one child nnode is allowed.");
+    }
 
-    // DEBUG
-    return Status::SUCCESS;
+    status_ = children_.front()->tick();
+
+    return status_;
 }
 
 DecoratorNode::Ptr
