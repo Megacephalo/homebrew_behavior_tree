@@ -12,6 +12,9 @@ class FallbackNode : public TreeNode {
     FallbackNode(const std::string& nodeName = "", const Status& status = Status::IDLE);
     ~FallbackNode() = default;
 
+    /**
+     * @brief The tick logic as described in the book "Behavior Trees in Robotics and AI" p.7
+    */
     Status tick() override;
     static FallbackNode::Ptr create(const std::string& nodeName = "", const Status& status = Status::IDLE);
 };
