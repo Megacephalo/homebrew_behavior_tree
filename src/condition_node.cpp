@@ -8,17 +8,20 @@ ConditionNode::ConditionNode(const std::string& nodeName, const Status& status)
 
 Status ConditionNode::tick() {
     if (children_.empty()) {
-        return Status::FAILURE;
+        throw std::runtime_error("ConditionNode::tick() - No child to tick");
     }
-    // TODO
+    if (children_.size() > 1) {
+        throw std::runtime_error("ConditionNode::tick() - Only one child nnode is allowed.");
+    }
 
-    // DEBUG
-    return Status::SUCCESS;
-}
+    status_ = children_.front()->tick();
+
+    return status_;
+} /* tick */
 
 ConditionNode::Ptr
 ConditionNode::create(const std::string& nodeName, const Status& status) {
     return std::make_shared<ConditionNode>(nodeName, status);
-}
+} /* create */
 
 } /* namespace */

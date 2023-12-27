@@ -12,7 +12,7 @@ class ConditionNode : public TreeNode {
     ConditionNode(const std::string& nodeName = "", const Status& status = Status::IDLE);
     ~ConditionNode() = default;
 
-    Status tick() override;
+    virtual Status tick();
     static ConditionNode::Ptr create(const std::string& nodeName = "", const Status& status = Status::IDLE);
 };
 
