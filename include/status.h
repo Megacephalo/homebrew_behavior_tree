@@ -5,6 +5,9 @@
 
 namespace Homebrew_Behavior_Tree {
 
+/**
+ * @brief The status of a node in the behavior tree.
+*/
 enum class Status {
     IDLE,
     SUCCESS,
@@ -12,6 +15,12 @@ enum class Status {
     RUNNING
 };
 
+/**
+ * @brief Overload the << operator for the Status enum class.
+ * @param os The output stream
+ * @param status The status to be printed
+ * @return The output stream
+*/
 inline
 std::ostream& operator << (std::ostream& os, const Status& status) {
     switch (status) {
