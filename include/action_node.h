@@ -9,7 +9,7 @@ class ActionNode : public TreeNode {
   public:
     typedef std::shared_ptr<ActionNode> Ptr;
   public:
-    ActionNode(const std::string& nodeName = "", const Status& status = Status::IDLE);
+    ActionNode(const std::string& nodeName = "", const Status& status = Status::RUNNING);
     ~ActionNode() = default;
 
     Status tick() override;
