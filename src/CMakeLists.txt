@@ -1,0 +1,10 @@
+add_library(homebrew_bt
+    blackboard.cpp
+    tree_node.cpp
+    action_node.cpp
+    condition_node.cpp
+    decorator_node.cpp
+    fallback_node.cpp
+    parallel_node.cpp
+    sequence_node.cpp
+)
