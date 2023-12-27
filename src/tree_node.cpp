@@ -38,11 +38,14 @@ TreeNode::getName() const {
     return nodeName_;
 } /* getName */
 
-std::string
-TreeNode::getState() const {
-    std::stringstream ss;
-    ss << status_;
-    return ss.str();
-} /* getState */
+Status
+TreeNode::getStatus() const {
+    return status_;
+} /* getStatus */
+
+bool
+TreeNode::operator == (const TreeNode& other) const {
+    return nodeName_ == other.nodeName_ and status_ == other.status_;
+}
 
 } /* namespace */

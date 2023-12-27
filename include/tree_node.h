@@ -26,7 +26,8 @@ class TreeNode {
     void removeChild(const TreeNode::Ptr& child);
     bool hasChildren() const;
     std::string getName() const;
-    std::string getState() const;
+    Status getStatus() const;
+    bool operator == (const TreeNode& other) const;
 };
 
 } /* namespace */
