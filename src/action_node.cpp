@@ -7,18 +7,12 @@ ActionNode::ActionNode(const std::string& nodeName, const Status& status)
 {} /* ctor */
 
 Status ActionNode::tick() {
-    if (children_.empty()) {
-        return Status::FAILURE;
-    }
-    // TODO
-
-    // DEBUG
-    return Status::SUCCESS;
-}
+    return status_;
+} /* tick */
 
 ActionNode::Ptr
 ActionNode::create(const std::string& nodeName, const Status& status) {
     return std::make_shared<ActionNode>(nodeName, status);
-}
+} /* create */
 
 } /* namespace */

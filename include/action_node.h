@@ -12,7 +12,7 @@ class ActionNode : public TreeNode {
     ActionNode(const std::string& nodeName = "", const Status& status = Status::RUNNING);
     ~ActionNode() = default;
 
-    Status tick() override;
+    virtual Status tick();
     static ActionNode::Ptr create(const std::string& nodeName = "", const Status& status = Status::IDLE);
 };
 
