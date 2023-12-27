@@ -1,7 +1,6 @@
 #ifndef _HOMEBREW_BEHAVIOR_TREE_TREE_NODE_H_
 #define _HOMEBREW_BEHAVIOR_TREE_TREE_NODE_H_
 
-#include <sstream>
 #include <string>
 #include <list>
 #include <memory>
