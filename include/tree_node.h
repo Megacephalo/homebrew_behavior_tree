@@ -3,7 +3,7 @@
 
 #include <sstream>
 #include <string>
-#include <unordered_set>
+#include <list>
 #include <memory>
 
 #include "status.h"
@@ -15,13 +15,16 @@ class TreeNode {
     typedef std::shared_ptr<TreeNode> Ptr;
   protected:
     Status status_;
-    std::unordered_set<TreeNode::Ptr> children_;
+    std::list<TreeNode::Ptr> children_;
     std::string nodeName_;
   public:
     TreeNode(const std::string& nodeName, const Status& status);
     virtual ~TreeNode();
     virtual Status tick() = 0;
-    virtual void reset() {};
+    void addChild(const TreeNode::Ptr& child);
+    // TODO: Still requires O(n) time to remove a child
+    void removeChild(const TreeNode::Ptr& child);
+    bool hasChildren() const;
     std::string getName() const;
     std::string getState() const;
 };
